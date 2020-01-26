@@ -10,28 +10,46 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+    
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        self.window = window
+        let userListCoordinator = UserListCoordinator(withWindow: window)
+        userListCoordinator.start()
+        
+
+//        let networkConfiguration = NetworkConfiguration(cachePolicy: .useProtocolCachePolicy)
+//        let networking = NetworkModule(session: URLSession.shared, networkConfiguration:networkConfiguration)
+//        guard
+//            let userListServiceConfig = UserListServiceConfiguration(scheme: StackOverFlowAPIConfiguration.scheme,
+//                                                                          httpMethod: .get,
+//                                                                          host: StackOverFlowAPIConfiguration.host,
+//                                                                          apiVersion: StackOverFlowAPIConfiguration.version,
+//                                                                          method: ServiceMethod.users) else {
+//                                                                            return false
+//        }
+//        let userListService = UserListService(networking: networking, configuration: userListServiceConfig)
+//        userListService.fetchTopReputationUsers(amount: 20) { result in
+//            switch result {
+//                case .success(let users):
+//                    print(users)
+//
+//            case .failure(let error):
+//                    print(error)
+//            }
+//        }
+//        let userListViewModel = UserListViewModel(userListService: userListService,
+//                                                  numberOfUsersToRequest: StackOverFlowAPIConfiguration.numberOfUsersToRequest)
+//        window?.rootViewController = UserListViewController(viewModel: userListViewModel)
+//        window?.makeKeyAndVisible()
         return true
     }
 
-    // MARK: UISceneSession Lifecycle
+    private func setupInitialViewController() {
 
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
-
 }
-

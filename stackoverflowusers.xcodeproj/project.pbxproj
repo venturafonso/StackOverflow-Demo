@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		ADCFE57423DC968200091F98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE57323DC968200091F98 /* AppDelegate.swift */; };
-		ADCFE57623DC968200091F98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE57523DC968200091F98 /* SceneDelegate.swift */; };
-		ADCFE57823DC968200091F98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE57723DC968200091F98 /* ViewController.swift */; };
-		ADCFE57B23DC968200091F98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADCFE57923DC968200091F98 /* Main.storyboard */; };
 		ADCFE57D23DC968300091F98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADCFE57C23DC968300091F98 /* Assets.xcassets */; };
 		ADCFE58023DC968300091F98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADCFE57E23DC968300091F98 /* LaunchScreen.storyboard */; };
 		ADCFE58B23DC968300091F98 /* stackoverflowusersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE58A23DC968300091F98 /* stackoverflowusersTests.swift */; };
+		ADCFE5A523DC9DA900091F98 /* UsersListViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE5A423DC9DA900091F98 /* UsersListViewControllerTableViewController.swift */; };
+		ADCFE5A723DCA2E700091F98 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE5A623DCA2E700091F98 /* UserListViewModel.swift */; };
+		ADCFE5A923DCAC7C00091F98 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE5A823DCAC7C00091F98 /* User.swift */; };
+		ADCFE5AF23DCB08500091F98 /* NetworkModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE5AE23DCB08500091F98 /* NetworkModule.swift */; };
+		ADCFE5B423DCDADA00091F98 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE5B323DCDADA00091F98 /* Constants.swift */; };
+		ADF55FE023DD291100A08F23 /* UserListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FDF23DD291100A08F23 /* UserListCoordinator.swift */; };
+		ADF55FE223DD2F2D00A08F23 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FE123DD2F2D00A08F23 /* Data.swift */; };
+		ADF55FE423DD2FA300A08F23 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ADF55FE323DD2FA300A08F23 /* .swiftlint.yml */; };
+		ADF55FE723DD36B700A08F23 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FE623DD36B700A08F23 /* UserTableViewCell.swift */; };
+		ADF55FE923DD3A4200A08F23 /* UserTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FE823DD3A4200A08F23 /* UserTableViewCellViewModel.swift */; };
+		ADF55FEB23DD3EDA00A08F23 /* UserListSsrvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FEA23DD3EDA00A08F23 /* UserListSsrvice.swift */; };
+		ADF55FED23DD4DFE00A08F23 /* ImageFetchingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FEC23DD4DFE00A08F23 /* ImageFetchingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +38,24 @@
 /* Begin PBXFileReference section */
 		ADCFE57023DC968200091F98 /* stackoverflowusers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stackoverflowusers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADCFE57323DC968200091F98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ADCFE57523DC968200091F98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ADCFE57723DC968200091F98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ADCFE57A23DC968200091F98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADCFE57C23DC968300091F98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADCFE57F23DC968300091F98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADCFE58123DC968300091F98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADCFE58623DC968300091F98 /* stackoverflowusersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stackoverflowusersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADCFE58A23DC968300091F98 /* stackoverflowusersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stackoverflowusersTests.swift; sourceTree = "<group>"; };
 		ADCFE58C23DC968300091F98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADCFE5A423DC9DA900091F98 /* UsersListViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewControllerTableViewController.swift; sourceTree = "<group>"; };
+		ADCFE5A623DCA2E700091F98 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		ADCFE5A823DCAC7C00091F98 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ADCFE5AE23DCB08500091F98 /* NetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModule.swift; sourceTree = "<group>"; };
+		ADCFE5B323DCDADA00091F98 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ADF55FDF23DD291100A08F23 /* UserListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCoordinator.swift; sourceTree = "<group>"; };
+		ADF55FE123DD2F2D00A08F23 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		ADF55FE323DD2FA300A08F23 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		ADF55FE623DD36B700A08F23 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		ADF55FE823DD3A4200A08F23 /* UserTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		ADF55FEA23DD3EDA00A08F23 /* UserListSsrvice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListSsrvice.swift; sourceTree = "<group>"; };
+		ADF55FEC23DD4DFE00A08F23 /* ImageFetchingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetchingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +82,7 @@
 				ADCFE57223DC968200091F98 /* stackoverflowusers */,
 				ADCFE58923DC968300091F98 /* stackoverflowusersTests */,
 				ADCFE57123DC968200091F98 /* Products */,
+				ADF55FE323DD2FA300A08F23 /* .swiftlint.yml */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +98,15 @@
 		ADCFE57223DC968200091F98 /* stackoverflowusers */ = {
 			isa = PBXGroup;
 			children = (
+				ADCFE5B223DCD36400091F98 /* Extensions */,
 				ADCFE57323DC968200091F98 /* AppDelegate.swift */,
-				ADCFE57523DC968200091F98 /* SceneDelegate.swift */,
-				ADCFE57723DC968200091F98 /* ViewController.swift */,
-				ADCFE57923DC968200091F98 /* Main.storyboard */,
-				ADCFE57C23DC968300091F98 /* Assets.xcassets */,
-				ADCFE57E23DC968300091F98 /* LaunchScreen.storyboard */,
 				ADCFE58123DC968300091F98 /* Info.plist */,
+				ADCFE5A123DC9AF600091F98 /* Services */,
+				ADCFE59823DC989000091F98 /* Models */,
+				ADCFE59D23DC9A1E00091F98 /* Scenes */,
+				ADCFE59523DC987C00091F98 /* Resources */,
+				ADCFE57E23DC968300091F98 /* LaunchScreen.storyboard */,
+				ADF55FDF23DD291100A08F23 /* UserListCoordinator.swift */,
 			);
 			path = stackoverflowusers;
 			sourceTree = "<group>";
@@ -99,6 +120,84 @@
 			path = stackoverflowusersTests;
 			sourceTree = "<group>";
 		};
+		ADCFE59523DC987C00091F98 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADCFE57C23DC968300091F98 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ADCFE59823DC989000091F98 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ADCFE5A823DCAC7C00091F98 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ADCFE59923DC989400091F98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADCFE5A423DC9DA900091F98 /* UsersListViewControllerTableViewController.swift */,
+				ADF55FE623DD36B700A08F23 /* UserTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADCFE59D23DC9A1E00091F98 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				ADCFE59E23DC9A3800091F98 /* UsersList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		ADCFE59E23DC9A3800091F98 /* UsersList */ = {
+			isa = PBXGroup;
+			children = (
+				ADCFE59F23DC9A7100091F98 /* ViewModel */,
+				ADCFE59923DC989400091F98 /* View */,
+			);
+			path = UsersList;
+			sourceTree = "<group>";
+		};
+		ADCFE59F23DC9A7100091F98 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ADCFE5A623DCA2E700091F98 /* UserListViewModel.swift */,
+				ADF55FE823DD3A4200A08F23 /* UserTableViewCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ADCFE5A123DC9AF600091F98 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ADCFE5B323DCDADA00091F98 /* Constants.swift */,
+				ADCFE5AE23DCB08500091F98 /* NetworkModule.swift */,
+				ADCFE5AA23DCB03D00091F98 /* StackOverflow */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ADCFE5AA23DCB03D00091F98 /* StackOverflow */ = {
+			isa = PBXGroup;
+			children = (
+				ADF55FEA23DD3EDA00A08F23 /* UserListSsrvice.swift */,
+				ADF55FEC23DD4DFE00A08F23 /* ImageFetchingService.swift */,
+			);
+			path = StackOverflow;
+			sourceTree = "<group>";
+		};
+		ADCFE5B223DCD36400091F98 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ADF55FE123DD2F2D00A08F23 /* Data.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,6 +208,7 @@
 				ADCFE56C23DC968200091F98 /* Sources */,
 				ADCFE56D23DC968200091F98 /* Frameworks */,
 				ADCFE56E23DC968200091F98 /* Resources */,
+				ADF55FE523DD2FC900A08F23 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -180,9 +280,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADF55FE423DD2FA300A08F23 /* .swiftlint.yml in Resources */,
 				ADCFE58023DC968300091F98 /* LaunchScreen.storyboard in Resources */,
 				ADCFE57D23DC968300091F98 /* Assets.xcassets in Resources */,
-				ADCFE57B23DC968200091F98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,14 +295,44 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		ADF55FE523DD2FC900A08F23 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#if which swiftlint >/dev/null; then\n    #swiftlint autocorrect\n    #swiftlint\n#else\n    #echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n#fi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ADCFE56C23DC968200091F98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADCFE57823DC968200091F98 /* ViewController.swift in Sources */,
+				ADF55FE923DD3A4200A08F23 /* UserTableViewCellViewModel.swift in Sources */,
 				ADCFE57423DC968200091F98 /* AppDelegate.swift in Sources */,
-				ADCFE57623DC968200091F98 /* SceneDelegate.swift in Sources */,
+				ADF55FEB23DD3EDA00A08F23 /* UserListSsrvice.swift in Sources */,
+				ADCFE5AF23DCB08500091F98 /* NetworkModule.swift in Sources */,
+				ADCFE5A723DCA2E700091F98 /* UserListViewModel.swift in Sources */,
+				ADCFE5A523DC9DA900091F98 /* UsersListViewControllerTableViewController.swift in Sources */,
+				ADF55FE023DD291100A08F23 /* UserListCoordinator.swift in Sources */,
+				ADCFE5B423DCDADA00091F98 /* Constants.swift in Sources */,
+				ADF55FE223DD2F2D00A08F23 /* Data.swift in Sources */,
+				ADF55FED23DD4DFE00A08F23 /* ImageFetchingService.swift in Sources */,
+				ADF55FE723DD36B700A08F23 /* UserTableViewCell.swift in Sources */,
+				ADCFE5A923DCAC7C00091F98 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +355,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ADCFE57923DC968200091F98 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADCFE57A23DC968200091F98 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ADCFE57E23DC968300091F98 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
