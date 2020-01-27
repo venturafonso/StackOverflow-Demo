@@ -16,6 +16,7 @@ public protocol Coordinator: class {
 open class UserListCoordinator: Coordinator {
     public let window: UIWindow
     private let networkModule: NetworkModule
+    private let userPreferencesStore: UserPreferenceStore = UserPreferenceStore()
 
     public init(withWindow window: UIWindow) {
         self.window = window
@@ -50,7 +51,8 @@ open class UserListCoordinator: Coordinator {
         let userListService = UserListService(networking: networkModule, configuration: userListServiceConfig)
         let userCellService = ImageFetchingService(networking: networkModule)
         let userListViewModel = UserListViewModel(userListService: userListService, userCellService: userCellService,
-                                                  numberOfUsersToRequest: StackOverFlowAPIConfiguration.numberOfUsersToRequest)
+                                                  numberOfUsersToRequest: StackOverFlowAPIConfiguration.numberOfUsersToRequest,
+                                                  userPreferencesStore: userPreferencesStore)
         return UserListViewController(viewModel: userListViewModel)
     }
 }

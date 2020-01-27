@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  stackoverflowusers
+
+  Created by Afonso Coelho on 26/01/2020.
+  Copyright © 2020 Afonso Coelho. All rights reserved.
+*/
+
+"error_generic_title" = "Whoops";
+"error_generic_body" = "We got an error. Please try again? :)";
+"error_generic_action" = "Try again";
+
+"error_offline_title" = "Hmmmmm...";
+"error_offline_body" = "Looks like we are offline :(";
+"error_offline_action" = "Retry";
+
+"button_following_false" = "Follow";
+"button_following_true" = "Unfollow";
+"button_blocked" = "Block";
+

@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADBA544B23DEAA8900A85CB8 /* UserPreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBA544A23DEAA8900A85CB8 /* UserPreferencesStore.swift */; };
 		ADCFE57423DC968200091F98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE57323DC968200091F98 /* AppDelegate.swift */; };
 		ADCFE57D23DC968300091F98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADCFE57C23DC968300091F98 /* Assets.xcassets */; };
 		ADCFE58023DC968300091F98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADCFE57E23DC968300091F98 /* LaunchScreen.storyboard */; };
 		ADCFE58B23DC968300091F98 /* stackoverflowusersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE58A23DC968300091F98 /* stackoverflowusersTests.swift */; };
-		ADCFE5A523DC9DA900091F98 /* UsersListViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE5A423DC9DA900091F98 /* UsersListViewControllerTableViewController.swift */; };
+		ADCFE5A523DC9DA900091F98 /* UserListViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE5A423DC9DA900091F98 /* UserListViewControllerTableViewController.swift */; };
 		ADCFE5A723DCA2E700091F98 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE5A623DCA2E700091F98 /* UserListViewModel.swift */; };
 		ADCFE5A923DCAC7C00091F98 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE5A823DCAC7C00091F98 /* User.swift */; };
 		ADCFE5AF23DCB08500091F98 /* NetworkModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE5AE23DCB08500091F98 /* NetworkModule.swift */; };
@@ -23,6 +24,10 @@
 		ADF55FE923DD3A4200A08F23 /* UserTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FE823DD3A4200A08F23 /* UserTableViewCellViewModel.swift */; };
 		ADF55FEB23DD3EDA00A08F23 /* UserListSsrvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FEA23DD3EDA00A08F23 /* UserListSsrvice.swift */; };
 		ADF55FED23DD4DFE00A08F23 /* ImageFetchingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FEC23DD4DFE00A08F23 /* ImageFetchingService.swift */; };
+		ADF55FEF23DDD92A00A08F23 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FEE23DDD92A00A08F23 /* ErrorView.swift */; };
+		ADF55FF423DDDB3500A08F23 /* ErrorViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FF323DDDB3500A08F23 /* ErrorViewViewModel.swift */; };
+		ADF55FF823DDDC2500A08F23 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADF55FFA23DDDC2500A08F23 /* Localizable.strings */; };
+		ADF55FFC23DDDD7F00A08F23 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FFB23DDDD7F00A08F23 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ADBA544A23DEAA8900A85CB8 /* UserPreferencesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesStore.swift; sourceTree = "<group>"; };
 		ADCFE57023DC968200091F98 /* stackoverflowusers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stackoverflowusers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADCFE57323DC968200091F98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADCFE57C23DC968300091F98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,7 +50,7 @@
 		ADCFE58623DC968300091F98 /* stackoverflowusersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stackoverflowusersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADCFE58A23DC968300091F98 /* stackoverflowusersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stackoverflowusersTests.swift; sourceTree = "<group>"; };
 		ADCFE58C23DC968300091F98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADCFE5A423DC9DA900091F98 /* UsersListViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewControllerTableViewController.swift; sourceTree = "<group>"; };
+		ADCFE5A423DC9DA900091F98 /* UserListViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		ADCFE5A623DCA2E700091F98 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		ADCFE5A823DCAC7C00091F98 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ADCFE5AE23DCB08500091F98 /* NetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModule.swift; sourceTree = "<group>"; };
@@ -56,6 +62,10 @@
 		ADF55FE823DD3A4200A08F23 /* UserTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		ADF55FEA23DD3EDA00A08F23 /* UserListSsrvice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListSsrvice.swift; sourceTree = "<group>"; };
 		ADF55FEC23DD4DFE00A08F23 /* ImageFetchingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetchingService.swift; sourceTree = "<group>"; };
+		ADF55FEE23DDD92A00A08F23 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		ADF55FF323DDDB3500A08F23 /* ErrorViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewViewModel.swift; sourceTree = "<group>"; };
+		ADF55FF923DDDC2500A08F23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ADF55FFB23DDDD7F00A08F23 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +116,6 @@
 				ADCFE59D23DC9A1E00091F98 /* Scenes */,
 				ADCFE59523DC987C00091F98 /* Resources */,
 				ADCFE57E23DC968300091F98 /* LaunchScreen.storyboard */,
-				ADF55FDF23DD291100A08F23 /* UserListCoordinator.swift */,
 			);
 			path = stackoverflowusers;
 			sourceTree = "<group>";
@@ -124,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				ADCFE57C23DC968300091F98 /* Assets.xcassets */,
+				ADF55FFA23DDDC2500A08F23 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -139,7 +149,7 @@
 		ADCFE59923DC989400091F98 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ADCFE5A423DC9DA900091F98 /* UsersListViewControllerTableViewController.swift */,
+				ADCFE5A423DC9DA900091F98 /* UserListViewControllerTableViewController.swift */,
 				ADF55FE623DD36B700A08F23 /* UserTableViewCell.swift */,
 			);
 			path = View;
@@ -148,6 +158,7 @@
 		ADCFE59D23DC9A1E00091F98 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				ADF55FF023DDDACF00A08F23 /* ErrorView */,
 				ADCFE59E23DC9A3800091F98 /* UsersList */,
 			);
 			path = Scenes;
@@ -156,6 +167,7 @@
 		ADCFE59E23DC9A3800091F98 /* UsersList */ = {
 			isa = PBXGroup;
 			children = (
+				ADF55FF523DDDB7100A08F23 /* Coordinator */,
 				ADCFE59F23DC9A7100091F98 /* ViewModel */,
 				ADCFE59923DC989400091F98 /* View */,
 			);
@@ -175,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				ADCFE5B323DCDADA00091F98 /* Constants.swift */,
+				ADBA544A23DEAA8900A85CB8 /* UserPreferencesStore.swift */,
 				ADCFE5AE23DCB08500091F98 /* NetworkModule.swift */,
 				ADCFE5AA23DCB03D00091F98 /* StackOverflow */,
 			);
@@ -194,8 +207,42 @@
 			isa = PBXGroup;
 			children = (
 				ADF55FE123DD2F2D00A08F23 /* Data.swift */,
+				ADF55FFB23DDDD7F00A08F23 /* String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ADF55FF023DDDACF00A08F23 /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				ADF55FF223DDDAEE00A08F23 /* ViewModel */,
+				ADF55FF123DDDAEA00A08F23 /* View */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		ADF55FF123DDDAEA00A08F23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADF55FEE23DDD92A00A08F23 /* ErrorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADF55FF223DDDAEE00A08F23 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ADF55FF323DDDB3500A08F23 /* ErrorViewViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ADF55FF523DDDB7100A08F23 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				ADF55FDF23DD291100A08F23 /* UserListCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADF55FE423DD2FA300A08F23 /* .swiftlint.yml in Resources */,
+				ADF55FF823DDDC2500A08F23 /* Localizable.strings in Resources */,
 				ADCFE58023DC968300091F98 /* LaunchScreen.storyboard in Resources */,
 				ADCFE57D23DC968300091F98 /* Assets.xcassets in Resources */,
 			);
@@ -326,12 +374,16 @@
 				ADF55FEB23DD3EDA00A08F23 /* UserListSsrvice.swift in Sources */,
 				ADCFE5AF23DCB08500091F98 /* NetworkModule.swift in Sources */,
 				ADCFE5A723DCA2E700091F98 /* UserListViewModel.swift in Sources */,
-				ADCFE5A523DC9DA900091F98 /* UsersListViewControllerTableViewController.swift in Sources */,
+				ADCFE5A523DC9DA900091F98 /* UserListViewControllerTableViewController.swift in Sources */,
+				ADBA544B23DEAA8900A85CB8 /* UserPreferencesStore.swift in Sources */,
 				ADF55FE023DD291100A08F23 /* UserListCoordinator.swift in Sources */,
 				ADCFE5B423DCDADA00091F98 /* Constants.swift in Sources */,
 				ADF55FE223DD2F2D00A08F23 /* Data.swift in Sources */,
 				ADF55FED23DD4DFE00A08F23 /* ImageFetchingService.swift in Sources */,
+				ADF55FF423DDDB3500A08F23 /* ErrorViewViewModel.swift in Sources */,
 				ADF55FE723DD36B700A08F23 /* UserTableViewCell.swift in Sources */,
+				ADF55FFC23DDDD7F00A08F23 /* String.swift in Sources */,
+				ADF55FEF23DDD92A00A08F23 /* ErrorView.swift in Sources */,
 				ADCFE5A923DCAC7C00091F98 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +413,14 @@
 				ADCFE57F23DC968300091F98 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		ADF55FFA23DDDC2500A08F23 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADF55FF923DDDC2500A08F23 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
