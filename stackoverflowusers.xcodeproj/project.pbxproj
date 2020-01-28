@@ -7,11 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD0CD25023DF7718001432A1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CD24F23DF7718001432A1 /* User.swift */; };
 		ADBA544B23DEAA8900A85CB8 /* UserPreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBA544A23DEAA8900A85CB8 /* UserPreferencesStore.swift */; };
+		ADC5DD3523DF854500BCEB01 /* UserListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5DD3423DF854500BCEB01 /* UserListViewModelTests.swift */; };
+		ADC5DD3723DF856D00BCEB01 /* PreferencesDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5DD3623DF856D00BCEB01 /* PreferencesDataStoreTests.swift */; };
+		ADC5DD3923DF861800BCEB01 /* MockNetworkModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5DD3823DF861800BCEB01 /* MockNetworkModule.swift */; };
+		ADC5DD3B23DF864A00BCEB01 /* MockUserListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5DD3A23DF864A00BCEB01 /* MockUserListService.swift */; };
+		ADC5DD3D23DF868F00BCEB01 /* MockUserPreferenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5DD3C23DF868F00BCEB01 /* MockUserPreferenceStore.swift */; };
+		ADC5DD4023DF8A6B00BCEB01 /* stackOverFlowUserList.json in Resources */ = {isa = PBXBuildFile; fileRef = ADC5DD3F23DF8A6B00BCEB01 /* stackOverFlowUserList.json */; };
+		ADC5DD4223DF8A9B00BCEB01 /* stackOverFlowUserListTop20.json in Resources */ = {isa = PBXBuildFile; fileRef = ADC5DD4123DF8A9B00BCEB01 /* stackOverFlowUserListTop20.json */; };
+		ADC5DD4423DF8BD300BCEB01 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5DD4323DF8BD300BCEB01 /* Bundle.swift */; };
+		ADC5DD4623DF8C3800BCEB01 /* stackOverFlowUserListBottom20.json in Resources */ = {isa = PBXBuildFile; fileRef = ADC5DD4523DF8C3800BCEB01 /* stackOverFlowUserListBottom20.json */; };
+		ADC5DD4823DF8CF800BCEB01 /* MockImageFetchingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5DD4723DF8CF800BCEB01 /* MockImageFetchingService.swift */; };
+		ADC5DD4A23DFC0ED00BCEB01 /* invalidData.json in Resources */ = {isa = PBXBuildFile; fileRef = ADC5DD4923DFC0ED00BCEB01 /* invalidData.json */; };
+		ADC5DD4C23DFC84600BCEB01 /* UserTableViewCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5DD4B23DFC84600BCEB01 /* UserTableViewCellViewModelTests.swift */; };
+		ADC5DD4E23DFCD6300BCEB01 /* ErrorViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5DD4D23DFCD6300BCEB01 /* ErrorViewModelTests.swift */; };
+		ADC5DD5023DFCE4B00BCEB01 /* MockErrorViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5DD4F23DFCE4B00BCEB01 /* MockErrorViewDelegate.swift */; };
+		ADC5DD5423DFDAC600BCEB01 /* UserListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5DD5323DFDAC600BCEB01 /* UserListServiceTests.swift */; };
 		ADCFE57423DC968200091F98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE57323DC968200091F98 /* AppDelegate.swift */; };
 		ADCFE57D23DC968300091F98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADCFE57C23DC968300091F98 /* Assets.xcassets */; };
 		ADCFE58023DC968300091F98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADCFE57E23DC968300091F98 /* LaunchScreen.storyboard */; };
-		ADCFE58B23DC968300091F98 /* stackoverflowusersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE58A23DC968300091F98 /* stackoverflowusersTests.swift */; };
 		ADCFE5A523DC9DA900091F98 /* UserListViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE5A423DC9DA900091F98 /* UserListViewControllerTableViewController.swift */; };
 		ADCFE5A723DCA2E700091F98 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE5A623DCA2E700091F98 /* UserListViewModel.swift */; };
 		ADCFE5A923DCAC7C00091F98 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE5A823DCAC7C00091F98 /* User.swift */; };
@@ -19,13 +34,12 @@
 		ADCFE5B423DCDADA00091F98 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE5B323DCDADA00091F98 /* Constants.swift */; };
 		ADF55FE023DD291100A08F23 /* UserListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FDF23DD291100A08F23 /* UserListCoordinator.swift */; };
 		ADF55FE223DD2F2D00A08F23 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FE123DD2F2D00A08F23 /* Data.swift */; };
-		ADF55FE423DD2FA300A08F23 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ADF55FE323DD2FA300A08F23 /* .swiftlint.yml */; };
 		ADF55FE723DD36B700A08F23 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FE623DD36B700A08F23 /* UserTableViewCell.swift */; };
 		ADF55FE923DD3A4200A08F23 /* UserTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FE823DD3A4200A08F23 /* UserTableViewCellViewModel.swift */; };
 		ADF55FEB23DD3EDA00A08F23 /* UserListSsrvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FEA23DD3EDA00A08F23 /* UserListSsrvice.swift */; };
 		ADF55FED23DD4DFE00A08F23 /* ImageFetchingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FEC23DD4DFE00A08F23 /* ImageFetchingService.swift */; };
 		ADF55FEF23DDD92A00A08F23 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FEE23DDD92A00A08F23 /* ErrorView.swift */; };
-		ADF55FF423DDDB3500A08F23 /* ErrorViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FF323DDDB3500A08F23 /* ErrorViewViewModel.swift */; };
+		ADF55FF423DDDB3500A08F23 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FF323DDDB3500A08F23 /* ErrorViewModel.swift */; };
 		ADF55FF823DDDC2500A08F23 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADF55FFA23DDDC2500A08F23 /* Localizable.strings */; };
 		ADF55FFC23DDDD7F00A08F23 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF55FFB23DDDD7F00A08F23 /* String.swift */; };
 /* End PBXBuildFile section */
@@ -41,14 +55,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD0CD24F23DF7718001432A1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ADBA544A23DEAA8900A85CB8 /* UserPreferencesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesStore.swift; sourceTree = "<group>"; };
+		ADC5DD3423DF854500BCEB01 /* UserListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelTests.swift; sourceTree = "<group>"; };
+		ADC5DD3623DF856D00BCEB01 /* PreferencesDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesDataStoreTests.swift; sourceTree = "<group>"; };
+		ADC5DD3823DF861800BCEB01 /* MockNetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkModule.swift; sourceTree = "<group>"; };
+		ADC5DD3A23DF864A00BCEB01 /* MockUserListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserListService.swift; sourceTree = "<group>"; };
+		ADC5DD3C23DF868F00BCEB01 /* MockUserPreferenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserPreferenceStore.swift; sourceTree = "<group>"; };
+		ADC5DD3F23DF8A6B00BCEB01 /* stackOverFlowUserList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stackOverFlowUserList.json; sourceTree = "<group>"; };
+		ADC5DD4123DF8A9B00BCEB01 /* stackOverFlowUserListTop20.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stackOverFlowUserListTop20.json; sourceTree = "<group>"; };
+		ADC5DD4323DF8BD300BCEB01 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		ADC5DD4523DF8C3800BCEB01 /* stackOverFlowUserListBottom20.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stackOverFlowUserListBottom20.json; sourceTree = "<group>"; };
+		ADC5DD4723DF8CF800BCEB01 /* MockImageFetchingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageFetchingService.swift; sourceTree = "<group>"; };
+		ADC5DD4923DFC0ED00BCEB01 /* invalidData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invalidData.json; sourceTree = "<group>"; };
+		ADC5DD4B23DFC84600BCEB01 /* UserTableViewCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCellViewModelTests.swift; sourceTree = "<group>"; };
+		ADC5DD4D23DFCD6300BCEB01 /* ErrorViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModelTests.swift; sourceTree = "<group>"; };
+		ADC5DD4F23DFCE4B00BCEB01 /* MockErrorViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockErrorViewDelegate.swift; sourceTree = "<group>"; };
+		ADC5DD5323DFDAC600BCEB01 /* UserListServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListServiceTests.swift; sourceTree = "<group>"; };
 		ADCFE57023DC968200091F98 /* stackoverflowusers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stackoverflowusers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADCFE57323DC968200091F98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADCFE57C23DC968300091F98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADCFE57F23DC968300091F98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADCFE58123DC968300091F98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADCFE58623DC968300091F98 /* stackoverflowusersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stackoverflowusersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADCFE58A23DC968300091F98 /* stackoverflowusersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stackoverflowusersTests.swift; sourceTree = "<group>"; };
 		ADCFE58C23DC968300091F98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADCFE5A423DC9DA900091F98 /* UserListViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		ADCFE5A623DCA2E700091F98 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
@@ -57,13 +86,12 @@
 		ADCFE5B323DCDADA00091F98 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ADF55FDF23DD291100A08F23 /* UserListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCoordinator.swift; sourceTree = "<group>"; };
 		ADF55FE123DD2F2D00A08F23 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		ADF55FE323DD2FA300A08F23 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		ADF55FE623DD36B700A08F23 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		ADF55FE823DD3A4200A08F23 /* UserTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		ADF55FEA23DD3EDA00A08F23 /* UserListSsrvice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListSsrvice.swift; sourceTree = "<group>"; };
 		ADF55FEC23DD4DFE00A08F23 /* ImageFetchingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetchingService.swift; sourceTree = "<group>"; };
 		ADF55FEE23DDD92A00A08F23 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
-		ADF55FF323DDDB3500A08F23 /* ErrorViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewViewModel.swift; sourceTree = "<group>"; };
+		ADF55FF323DDDB3500A08F23 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
 		ADF55FF923DDDC2500A08F23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ADF55FFB23DDDD7F00A08F23 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,13 +114,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD0CD24C23DF76E8001432A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD0CD24F23DF7718001432A1 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AD0CD24D23DF76FC001432A1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ADC5DD3823DF861800BCEB01 /* MockNetworkModule.swift */,
+				ADC5DD3A23DF864A00BCEB01 /* MockUserListService.swift */,
+				ADC5DD4723DF8CF800BCEB01 /* MockImageFetchingService.swift */,
+				ADC5DD3C23DF868F00BCEB01 /* MockUserPreferenceStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AD0CD24E23DF7709001432A1 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				ADC5DD2E23DF83BE00BCEB01 /* Scenes */,
+				ADC5DD2D23DF83B800BCEB01 /* Services */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		ADC5DD2D23DF83B800BCEB01 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ADC5DD3623DF856D00BCEB01 /* PreferencesDataStoreTests.swift */,
+				ADC5DD5323DFDAC600BCEB01 /* UserListServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ADC5DD2E23DF83BE00BCEB01 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				ADC5DD3323DF84B400BCEB01 /* ErrorView */,
+				ADC5DD3223DF84A200BCEB01 /* UserList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		ADC5DD3223DF84A200BCEB01 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				ADC5DD3423DF854500BCEB01 /* UserListViewModelTests.swift */,
+				ADC5DD4B23DFC84600BCEB01 /* UserTableViewCellViewModelTests.swift */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		ADC5DD3323DF84B400BCEB01 /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				ADC5DD4D23DFCD6300BCEB01 /* ErrorViewModelTests.swift */,
+				ADC5DD4F23DFCE4B00BCEB01 /* MockErrorViewDelegate.swift */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		ADC5DD3E23DF8A5C00BCEB01 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADC5DD4123DF8A9B00BCEB01 /* stackOverFlowUserListTop20.json */,
+				ADC5DD4523DF8C3800BCEB01 /* stackOverFlowUserListBottom20.json */,
+				ADC5DD3F23DF8A6B00BCEB01 /* stackOverFlowUserList.json */,
+				ADC5DD4923DFC0ED00BCEB01 /* invalidData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		ADCFE56723DC968200091F98 = {
 			isa = PBXGroup;
 			children = (
 				ADCFE57223DC968200091F98 /* stackoverflowusers */,
 				ADCFE58923DC968300091F98 /* stackoverflowusersTests */,
 				ADCFE57123DC968200091F98 /* Products */,
-				ADF55FE323DD2FA300A08F23 /* .swiftlint.yml */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,7 +225,10 @@
 		ADCFE58923DC968300091F98 /* stackoverflowusersTests */ = {
 			isa = PBXGroup;
 			children = (
-				ADCFE58A23DC968300091F98 /* stackoverflowusersTests.swift */,
+				ADC5DD3E23DF8A5C00BCEB01 /* Resources */,
+				AD0CD24C23DF76E8001432A1 /* Models */,
+				AD0CD24D23DF76FC001432A1 /* Services */,
+				AD0CD24E23DF7709001432A1 /* Tests */,
 				ADCFE58C23DC968300091F98 /* Info.plist */,
 			);
 			path = stackoverflowusersTests;
@@ -159,19 +264,19 @@
 			isa = PBXGroup;
 			children = (
 				ADF55FF023DDDACF00A08F23 /* ErrorView */,
-				ADCFE59E23DC9A3800091F98 /* UsersList */,
+				ADCFE59E23DC9A3800091F98 /* UserList */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		ADCFE59E23DC9A3800091F98 /* UsersList */ = {
+		ADCFE59E23DC9A3800091F98 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
 				ADF55FF523DDDB7100A08F23 /* Coordinator */,
 				ADCFE59F23DC9A7100091F98 /* ViewModel */,
 				ADCFE59923DC989400091F98 /* View */,
 			);
-			path = UsersList;
+			path = UserList;
 			sourceTree = "<group>";
 		};
 		ADCFE59F23DC9A7100091F98 /* ViewModel */ = {
@@ -208,6 +313,7 @@
 			children = (
 				ADF55FE123DD2F2D00A08F23 /* Data.swift */,
 				ADF55FFB23DDDD7F00A08F23 /* String.swift */,
+				ADC5DD4323DF8BD300BCEB01 /* Bundle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -232,7 +338,7 @@
 		ADF55FF223DDDAEE00A08F23 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				ADF55FF323DDDB3500A08F23 /* ErrorViewViewModel.swift */,
+				ADF55FF323DDDB3500A08F23 /* ErrorViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -255,7 +361,6 @@
 				ADCFE56C23DC968200091F98 /* Sources */,
 				ADCFE56D23DC968200091F98 /* Frameworks */,
 				ADCFE56E23DC968200091F98 /* Resources */,
-				ADF55FE523DD2FC900A08F23 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -327,7 +432,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADF55FE423DD2FA300A08F23 /* .swiftlint.yml in Resources */,
 				ADF55FF823DDDC2500A08F23 /* Localizable.strings in Resources */,
 				ADCFE58023DC968300091F98 /* LaunchScreen.storyboard in Resources */,
 				ADCFE57D23DC968300091F98 /* Assets.xcassets in Resources */,
@@ -338,31 +442,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADC5DD4023DF8A6B00BCEB01 /* stackOverFlowUserList.json in Resources */,
+				ADC5DD4A23DFC0ED00BCEB01 /* invalidData.json in Resources */,
+				ADC5DD4623DF8C3800BCEB01 /* stackOverFlowUserListBottom20.json in Resources */,
+				ADC5DD4223DF8A9B00BCEB01 /* stackOverFlowUserListTop20.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		ADF55FE523DD2FC900A08F23 /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#if which swiftlint >/dev/null; then\n    #swiftlint autocorrect\n    #swiftlint\n#else\n    #echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n#fi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ADCFE56C23DC968200091F98 /* Sources */ = {
@@ -380,8 +467,9 @@
 				ADCFE5B423DCDADA00091F98 /* Constants.swift in Sources */,
 				ADF55FE223DD2F2D00A08F23 /* Data.swift in Sources */,
 				ADF55FED23DD4DFE00A08F23 /* ImageFetchingService.swift in Sources */,
-				ADF55FF423DDDB3500A08F23 /* ErrorViewViewModel.swift in Sources */,
+				ADF55FF423DDDB3500A08F23 /* ErrorViewModel.swift in Sources */,
 				ADF55FE723DD36B700A08F23 /* UserTableViewCell.swift in Sources */,
+				ADC5DD4423DF8BD300BCEB01 /* Bundle.swift in Sources */,
 				ADF55FFC23DDDD7F00A08F23 /* String.swift in Sources */,
 				ADF55FEF23DDD92A00A08F23 /* ErrorView.swift in Sources */,
 				ADCFE5A923DCAC7C00091F98 /* User.swift in Sources */,
@@ -392,7 +480,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADCFE58B23DC968300091F98 /* stackoverflowusersTests.swift in Sources */,
+				ADC5DD4C23DFC84600BCEB01 /* UserTableViewCellViewModelTests.swift in Sources */,
+				ADC5DD3523DF854500BCEB01 /* UserListViewModelTests.swift in Sources */,
+				ADC5DD5423DFDAC600BCEB01 /* UserListServiceTests.swift in Sources */,
+				ADC5DD3723DF856D00BCEB01 /* PreferencesDataStoreTests.swift in Sources */,
+				AD0CD25023DF7718001432A1 /* User.swift in Sources */,
+				ADC5DD3B23DF864A00BCEB01 /* MockUserListService.swift in Sources */,
+				ADC5DD3D23DF868F00BCEB01 /* MockUserPreferenceStore.swift in Sources */,
+				ADC5DD4823DF8CF800BCEB01 /* MockImageFetchingService.swift in Sources */,
+				ADC5DD3923DF861800BCEB01 /* MockNetworkModule.swift in Sources */,
+				ADC5DD5023DFCE4B00BCEB01 /* MockErrorViewDelegate.swift in Sources */,
+				ADC5DD4E23DFCD6300BCEB01 /* ErrorViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

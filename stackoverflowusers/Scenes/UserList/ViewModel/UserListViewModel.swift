@@ -30,19 +30,19 @@ protocol UserListViewModelProtocol { //restrict access to the viewModel, make cl
 
 final class UserListViewModel: UserListViewModelProtocol {
     typealias StatusChangeHandler = (() -> Void)
-    
+
     let userService: UserListAPI
     let userCellService: UserCellAPI
-    var userDataSource: [User]?
     var statusChangedHandler: StatusChangeHandler?
-    var viewModelState: UserListViewModelState = .loading {
+    private(set) var userDataSource: [User]?
+    private(set) var viewModelState: UserListViewModelState = .loading {
         didSet {
             statusChangedHandler?()
         }
     }
     private let userPreferencesStore: UserPreferenceStoreProtocol
     private let numberOfUsersToRequest: Int
-    
+
     init(userListService: UserListAPI,
          userCellService: UserCellAPI,
          numberOfUsersToRequest: Int,
@@ -52,7 +52,7 @@ final class UserListViewModel: UserListViewModelProtocol {
         self.numberOfUsersToRequest = numberOfUsersToRequest
         self.userPreferencesStore = userPreferencesStore// to avoid a magic number
     }
-    
+
     func viewStateUpdated(_ viewState: viewState) {
         switch viewState {
             case .didLoad, .errored:
@@ -61,25 +61,26 @@ final class UserListViewModel: UserListViewModelProtocol {
                 break
         }
     }
-    
+
     func userListCellViewModel(for index: Int) -> UserTableViewCellViewModelProtocol {
         guard let user = userDataSource?[index] else {
             preconditionFailure("Failed to get user from data source on \(self) at index: \(index)")
         }
         return UserTableViewCellViewModel(user: user, userCellService: userCellService, userPreferencesStore: userPreferencesStore)
     }
-    
+
     private func requestTopUsers() {
         userService.fetchTopReputationUsers(amount: numberOfUsersToRequest) { [weak self] result in
             self?.handleUserRequestResponse(result)
         }
     }
-    
+
     private func handleUserRequestResponse(_ response: Result<[User], RequestError>) {
         switch response {
             case .success(let userList):
                 userDataSource = userList
                 viewModelState = .loaded
+
             case.failure(let error):
                 viewModelState = .error(error)
         }

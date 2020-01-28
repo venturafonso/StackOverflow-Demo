@@ -33,17 +33,17 @@ final class UserTableViewCellViewModel {
         userPreferencesStoreProtocol.getFollowState(for: user.userId)
     }
     private var userPreferencesStoreProtocol: UserPreferenceStoreProtocol
-    
+
     init(user: User, userCellService: UserCellAPI, userPreferencesStore: UserPreferenceStoreProtocol) {
         self.user = user
         self.userCellService = userCellService
         self.userPreferencesStoreProtocol = userPreferencesStore
     }
-    
+
     private func handleBlockAction() {
         userPreferencesStoreProtocol.toggleBlockState(for: user.userId)
     }
-    
+
     private func handleFollowAction() {
         userPreferencesStoreProtocol.toggleFollowState(for: user.userId)
     }
@@ -54,25 +54,25 @@ extension UserTableViewCellViewModel: UserTableViewCellViewModelProtocol {
     func didTapButton(action: UserTableViewCellAction) {
         switch action {
             case .follow:
-            handleFollowAction()
-            
+                handleFollowAction()
+
             case .block:
-            handleBlockAction()
+                handleBlockAction()
         }
     }
-    
+
     var name: String {
         return self.user.displayName
     }
-    
+
     var reputation: String {
         return String(self.user.reputation)
     }
-    
+
     var blocked: Bool {
         return userBlocked
     }
-    
+
     var followed: Bool {
         return userFollowed
     }

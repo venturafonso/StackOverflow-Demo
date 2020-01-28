@@ -1,5 +1,5 @@
 //
-//  ErrorViewViewModel.swift
+//  ErrorViewModel.swift
 //  stackoverflowusers
 //
 //  Created by Afonso Coelho on 26/01/2020.
@@ -21,14 +21,14 @@ final class ErrorViewModel: ErrorViewModelProtocol {
     let body: String
     let buttonTitle: String
     weak var delegate: ErrorViewModelDelegate?
-    
+
     private init(title: String, body: String, actionTitle: String, delegate: ErrorViewModelDelegate) {
         self.title = title
         self.body = body
         self.buttonTitle = actionTitle
         self.delegate = delegate
     }
-    
+
     func didTapRetry() {
         delegate?.retry()
     }

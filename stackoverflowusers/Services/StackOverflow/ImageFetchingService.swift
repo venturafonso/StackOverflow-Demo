@@ -14,7 +14,7 @@ protocol UserCellAPI { // Make the network API used on the viewModel as "dumb" a
 
 final class ImageFetchingService: Service {
     var networking: NetworkingProtocol
-    
+
     init(networking: NetworkingProtocol) {
         self.networking = networking
     }

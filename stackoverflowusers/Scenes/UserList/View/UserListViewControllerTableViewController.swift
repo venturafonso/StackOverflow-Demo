@@ -10,17 +10,17 @@ import UIKit
 
 class UserListViewController: UITableViewController {
     private var viewModel: UserListViewModelProtocol
-    
+
     init(viewModel: UserListViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         configureTableView()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel.statusChangedHandler = { [weak self] in
@@ -30,7 +30,7 @@ class UserListViewController: UITableViewController {
         }
         viewModel.viewStateUpdated(.didLoad)
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         viewModel.viewStateUpdated(.willAppear)
     }
@@ -41,7 +41,7 @@ class UserListViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         tableView.allowsSelection = false
     }
-    
+
     private func reactToViewModelChanges() {
         switch viewModel.viewModelState {
             case .loading:
@@ -52,28 +52,28 @@ class UserListViewController: UITableViewController {
                 presentErrorView(with: ErrorViewModel.create(for: error, delegate: self))
         }
     }
-    
+
     private func presentUserDataSource() {
         tableView.reloadData()
         tableView.backgroundView = nil
     }
-    
+
     private func presentErrorView(with viewModel: ErrorViewModel) {
         let view: ErrorView = ErrorView(parentView: self.view, viewModel: viewModel)
         view.backgroundColor = .red
         tableView.reloadData()
         tableView.backgroundView = view
     }
-    
+
     // MARK: - UITableViewDataSource Delegate
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
-        
+
         //let cell = tableView.cellForRow(at: 0) as? UserTableViewCell
-        
+
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch viewModel.viewModelState {
             case .loading, .error:
@@ -86,10 +86,10 @@ class UserListViewController: UITableViewController {
                 return numberOfUsers
         }
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UserTableViewCell {
-       return UserTableViewCell.dequeue(
-        from: tableView, viewModel: viewModel.userListCellViewModel(for: indexPath.row), cellDelegate: self)
+        return UserTableViewCell.dequeue(
+            from: tableView, viewModel: viewModel.userListCellViewModel(for: indexPath.row), cellDelegate: self)
     }
 }
 
