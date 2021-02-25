@@ -32,5 +32,5 @@ Some more details:
 
 ### Tableview / Table view architecture and state management:
 
-• Fully reutilizing cells and saving blocked/followed state to mock what a  prereference storage would look like dictionary, did not persist this in any way so it will reset on app relaunch.
-• UserTableViewCell class got a little too big for my liking, though I think responsibilities are still being delegated properly, there is definitely room for improvement mainly with cleaning up the constraint logic by making it more readable and obvious.
+-  Fully reutilizing cells and saving blocked/followed state to mock what a  prereference storage would look like dictionary, did not persist this in any way so it will reset on app relaunch.
+- UserTableViewCell class got a little too big for my liking, though I think responsibilities are still being delegated properly, there is definitely room for improvement mainly with cleaning up the constraint logic by making it more readable and obvious.
