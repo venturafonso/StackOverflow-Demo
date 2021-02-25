@@ -48,9 +48,10 @@ protocol NetworkingProtocol {
 }
 
 final class NetworkModule: NetworkingProtocol { // A common class that executes and creates the requests applying configurations to each request (e.g cache policy)
-    var networkConfiguration: NetworkConfiguration
-    internal let session: URLSession
-
+    
+    let session: URLSession
+    private(set) var networkConfiguration: NetworkConfiguration
+    
     init(session: URLSession, networkConfiguration: NetworkConfiguration) {
         self.session = session
         self.networkConfiguration = networkConfiguration

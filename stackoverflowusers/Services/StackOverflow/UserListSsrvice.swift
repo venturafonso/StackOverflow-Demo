@@ -29,9 +29,9 @@ final class UserListService: Service {
     public enum siteType: String {
         case stackoverflow
     }
-
-    private(set) var networking: NetworkingProtocol
+    
     private let configuration: UserListServiceConfiguration
+    private(set) var networking: NetworkingProtocol
 
     init(networking: NetworkingProtocol, configuration: UserListServiceConfiguration) {
         self.networking = networking
@@ -81,12 +81,12 @@ final class UserListService: Service {
 
 extension UserListService: UserListAPI {
     func fetchLowestReputationUsers(amount: Int, completion: @escaping (Result<[User], RequestError>) -> Void) {
-        let parameters = buildQueryParameters(pageSize: 20, resultOrder: .desc)
+        let parameters = buildQueryParameters(pageSize: amount, resultOrder: .desc)
         fetchUsers(with: parameters, completion: completion)
     }
 
     func fetchTopReputationUsers(amount: Int, completion: @escaping (Result<[User], RequestError>) -> Void) {
-        let parameters = buildQueryParameters(pageSize: 20)
+        let parameters = buildQueryParameters(pageSize: amount)
         fetchUsers(with: parameters, completion: completion)
     }
 }

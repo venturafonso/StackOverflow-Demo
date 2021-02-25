@@ -15,7 +15,6 @@ extension Bundle {
             else {
                 return nil
         }
-
         do {
             return try Data(contentsOf: URL(fileURLWithPath: resourcePath))
         } catch {

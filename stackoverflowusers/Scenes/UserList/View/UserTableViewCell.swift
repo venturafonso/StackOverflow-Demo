@@ -17,12 +17,12 @@ protocol UserTableViewCellDelegate: class {
     func updateCell(_ cell: UITableViewCell)
 }
 
-public class UserTableViewCell: UITableViewCell {
+final class UserTableViewCell: UITableViewCell {
 
     // MARK: - Views & Stored Properties
 
     lazy var socialFeatureStackViewBottomConstraint: NSLayoutConstraint = {
-        socialFeatureStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        socialFeatureStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
     }()
 
     lazy var cellTapGestureRecognizer: UITapGestureRecognizer = {
@@ -57,7 +57,7 @@ public class UserTableViewCell: UITableViewCell {
     }()
 
     lazy var collapsedConstraint: NSLayoutConstraint = {
-        avatarImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        avatarImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
     }() //activate and deactivate this
 
     lazy var expandedConstraint: NSLayoutConstraint = {
@@ -101,54 +101,20 @@ public class UserTableViewCell: UITableViewCell {
     // MARK: - Properties
 
     static let cellIdentifier = "user.cell"
-    private var viewModel: UserTableViewCellViewModelProtocol!
-    var expanded: Bool = false
     weak var delegate: UserTableViewCellDelegate?
+    var expanded: Bool = false
+    private var viewModel: UserTableViewCellViewModelProtocol!
 
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: UserTableViewCell.cellIdentifier)
         addSubviews()
         addGestureRecognizer(cellTapGestureRecognizer)
     }
-    @objc private func didTapCell() {
-        guard !viewModel.blocked else {
-            return
-        }
-        expanded ? collapse() : expand()
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-
-    @objc private func followButtonTapped() {
-        viewModel.didTapButton(action: .follow)
-        updateViewState(for: .follow)
-    }
-
-    @objc private func blockButtonTapped() {
-        viewModel.didTapButton(action: .block)
-        updateViewState(for: .block)
-    }
-
-    // MARK: Follow / Block state managament
-
-    private func updateViewState(for action: UserTableViewCellAction) {
-        switch action {
-            case .follow:
-                updateFollowUI(with: viewModel.followed)
-            case .block:
-                setupBlockUI(with: viewModel.blocked)
-        }
-    }
-
-    private func updateFollowUI(with followingState: Bool) {
-        setupFollowUI(with: followingState)              // If we had a follow button sub class for reusability, this method would go in there
-        if followingState {                              // along with its configuration, like FollowButton().setStyle(.unfollow)
-            followButton.backgroundColor = followButtonConfiguration.unfollow.backgroundColor
-            followButton.setTitle(followButtonConfiguration.unfollow.buttonTitleText, for: .normal)
-        } else {
-            followButton.backgroundColor = followButtonConfiguration.follow.backgroundColor
-            followButton.setTitle(followButtonConfiguration.follow.buttonTitleText, for: .normal)
-        }
-    }
-
+    
     // MARK: - Setup
 
     func setup(with viewModel: UserTableViewCellViewModelProtocol, delegate: UserTableViewCellDelegate) {
@@ -178,13 +144,9 @@ public class UserTableViewCell: UITableViewCell {
             }
         }
     }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
+    
     // MARK: - Dequeuing / Initialization
-
+    
     override public func prepareForReuse() {
         self.avatarImageView.image = nil
         self.nameLabel.text = nil
@@ -193,7 +155,7 @@ public class UserTableViewCell: UITableViewCell {
         setupBlockUI(with: viewModel.blocked)
         collapse()
     }
-
+    
     static func dequeue(from tableView: UITableView, viewModel: UserTableViewCellViewModelProtocol, cellDelegate: UserTableViewCellDelegate) -> UserTableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? UserTableViewCell else {
             assertionFailure("failed to dequeue reusable cell for table view")
@@ -202,16 +164,57 @@ public class UserTableViewCell: UITableViewCell {
         cell.setup(with: viewModel, delegate: cellDelegate)
         return cell
     }
+    
+    //MARK: Button Selectors
+    
+    @objc private func didTapCell() {
+        guard !viewModel.blocked else {
+            return
+        }
+        expanded ? collapse() : expand()
+    }
+    
+    @objc private func followButtonTapped() {
+        viewModel.didTapButton(action: .follow)
+        updateViewState(for: .follow)
+    }
+    
+    @objc private func blockButtonTapped() {
+        viewModel.didTapButton(action: .block)
+        updateViewState(for: .block)
+    }
+    
+    // MARK: Follow / Block state managament
+    
+    private func updateViewState(for action: UserTableViewCellAction) {
+        switch action {
+            case .follow:
+                updateFollowUI(with: viewModel.followed)
+            case .block:
+                setupBlockUI(with: viewModel.blocked)
+        }
+    }
+    
+    private func updateFollowUI(with followingState: Bool) {
+        setupFollowUI(with: followingState)              // If we had a follow button sub class for reusability, this method would go in there
+        if followingState {                              // along with its configuration, like FollowButton().setStyle(.unfollow)
+            followButton.backgroundColor = followButtonConfiguration.unfollow.backgroundColor
+            followButton.setTitle(followButtonConfiguration.unfollow.buttonTitleText, for: .normal)
+        } else {
+            followButton.backgroundColor = followButtonConfiguration.follow.backgroundColor
+            followButton.setTitle(followButtonConfiguration.follow.buttonTitleText, for: .normal)
+        }
+    }
 }
 
 // MARK: Constraint setup boilerplate
 
 extension UserTableViewCell {
     private func addSubviews() {
-        addSubview(avatarImageView)
-        addSubview(reputationLabel)
-        addSubview(nameLabel)
-        addSubview(dummySizingView)
+        contentView.addSubview(avatarImageView)
+        contentView.addSubview(reputationLabel)
+        contentView.addSubview(nameLabel)
+        contentView.addSubview(dummySizingView)
         setupAvatarImageView()
         setupReputationLabel()
         setupNameLabel()
@@ -240,7 +243,7 @@ extension UserTableViewCell {
 
     private func setupFollowUI(with followingState: Bool) {
         if followingState {
-            addSubview(followIndicatorLabel)
+            contentView.addSubview(followIndicatorLabel)
             setupFollowIndicatorLabel()
             followButton.backgroundColor = followButtonConfiguration.unfollow.backgroundColor
             followButton.setTitle(followButtonConfiguration.unfollow.buttonTitleText, for: .normal)
@@ -254,29 +257,29 @@ extension UserTableViewCell {
     private func setupAvatarImageView() {
         avatarImageView.bottomAnchor.constraint(equalTo: dummySizingView.topAnchor).isActive = true
         avatarImageView.heightAnchor.constraint(equalToConstant: ConstraintValues.avatarImageView.collapsedHeightConstraintValue).isActive = true
-        avatarImageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        avatarImageView.widthAnchor.constraint(equalTo: widthAnchor,
+        avatarImageView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        avatarImageView.widthAnchor.constraint(equalTo: contentView.widthAnchor,
                                                multiplier: ConstraintValues.avatarImageView.widthMultiplierValue).isActive = true
-        avatarImageView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        dummySizingView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        avatarImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
+        dummySizingView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         dummySizingView.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor).isActive = true
-        dummySizingView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        dummySizingView.rightAnchor.constraint(equalTo: leftAnchor).isActive = true    // Avoid layout ambiguity warning
+        dummySizingView.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
+        dummySizingView.rightAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true    // Avoid layout ambiguity warning
     }
 
     private func setupReputationLabel() {
         reputationLabel.bottomAnchor.constraint(equalTo: avatarImageView.bottomAnchor,
                                                 constant: ConstraintValues.reputationLabel.bottomConstraintValue).isActive = true
-        reputationLabel.rightAnchor.constraint(equalTo: rightAnchor,
+        reputationLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor,
                                                constant: ConstraintValues.reputationLabel.trailingConstraintValue).isActive = true
         reputationLabel.leftAnchor.constraint(equalTo: avatarImageView.rightAnchor,
                                               constant: ConstraintValues.reputationLabel.leadingConstraintValue).isActive = true
     }
 
     private func setupNameLabel() {
-        nameLabel.topAnchor.constraint(equalTo: topAnchor,
+        nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor,
                                        constant: ConstraintValues.nameLabel.topConstraintValue).isActive = true
-        nameLabel.rightAnchor.constraint(equalTo: rightAnchor,
+        nameLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor,
                                          constant: ConstraintValues.nameLabel.trailingConstraintValue).isActive = true
         nameLabel.leftAnchor.constraint(equalTo: avatarImageView.rightAnchor,
                                         constant: ConstraintValues.nameLabel.leadingConstraintValue).isActive = true
@@ -285,16 +288,16 @@ extension UserTableViewCell {
     private func setupStackView() {
         socialFeatureStackView.addArrangedSubview(followButton)
         socialFeatureStackView.addArrangedSubview(blockButton)
-        addSubview(socialFeatureStackView)
+        contentView.addSubview(socialFeatureStackView)
 
         socialFeatureStackView.topAnchor.constraint(equalTo:  dummySizingView.topAnchor,
                                                     constant: ConstraintValues.socialFeatureStackView.topAnchorConstant).isActive = true
-        socialFeatureStackView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        socialFeatureStackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
     }
 
     private func setupFollowIndicatorLabel() {
-        followIndicatorLabel.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        followIndicatorLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        followIndicatorLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
+        followIndicatorLabel.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         followIndicatorLabel.bottomAnchor.constraint(equalTo: dummySizingView.topAnchor).isActive = true
     }
 }

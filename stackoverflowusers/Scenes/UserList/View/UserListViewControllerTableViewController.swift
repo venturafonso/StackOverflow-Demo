@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserListViewController: UITableViewController {
+final class UserListViewController: UITableViewController {
     private var viewModel: UserListViewModelProtocol
 
     init(viewModel: UserListViewModelProtocol) {
@@ -34,6 +34,7 @@ class UserListViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         viewModel.viewStateUpdated(.willAppear)
     }
+    
     private func configureTableView() {
         tableView.register(UserTableViewCell.self, forCellReuseIdentifier: UserTableViewCell.cellIdentifier)
         tableView.estimatedRowHeight = 64
@@ -64,16 +65,15 @@ class UserListViewController: UITableViewController {
         tableView.reloadData()
         tableView.backgroundView = view
     }
+}
 
-    // MARK: - UITableViewDataSource Delegate
+// MARK: - UITableViewDataSource Delegate
 
+extension UserListViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
-
-        //let cell = tableView.cellForRow(at: 0) as? UserTableViewCell
-
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch viewModel.viewModelState {
             case .loading, .error:
@@ -86,7 +86,7 @@ class UserListViewController: UITableViewController {
                 return numberOfUsers
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UserTableViewCell {
         return UserTableViewCell.dequeue(
             from: tableView, viewModel: viewModel.userListCellViewModel(for: indexPath.row), cellDelegate: self)

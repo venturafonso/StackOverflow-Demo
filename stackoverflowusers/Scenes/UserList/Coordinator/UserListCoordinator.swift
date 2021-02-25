@@ -13,7 +13,7 @@ public protocol Coordinator: class {
     func start()
 }
 
-open class UserListCoordinator: Coordinator {
+final class UserListCoordinator: Coordinator {
     public let window: UIWindow
     private let networkModule: NetworkModule
     private let userPreferencesStore: UserPreferenceStore = UserPreferenceStore()
@@ -39,7 +39,7 @@ open class UserListCoordinator: Coordinator {
 
     // MARK: - UserListController initialization boilerplate
 
-    private func buildUserListController() -> UserListViewController? {
+    private func buildUserListController() -> UserListViewController? { // This should be in a factory class
         guard let userListServiceConfig = UserListServiceConfiguration(scheme: StackOverFlowAPIConfiguration.scheme,
                                                                        httpMethod: .get,
                                                                        host: StackOverFlowAPIConfiguration.host,

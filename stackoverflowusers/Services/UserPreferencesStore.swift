@@ -25,8 +25,8 @@ protocol UserPreferenceStoreProtocol {
     func getFollowState(for id: Int) -> Bool
 }
 
-class UserPreferenceStore: UserPreferenceStoreProtocol {
-    var preferences: [Int: Preferences] = [Int: Preferences]()
+final class UserPreferenceStore: UserPreferenceStoreProtocol {
+    private(set) var preferences: [Int: Preferences] = [Int: Preferences]()
 
     func getFollowState(for id: Int) -> Bool {
         return preferences[id]?.following ?? false

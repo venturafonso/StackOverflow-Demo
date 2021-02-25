@@ -210,14 +210,13 @@
 		ADCFE57223DC968200091F98 /* stackoverflowusers */ = {
 			isa = PBXGroup;
 			children = (
-				ADCFE5B223DCD36400091F98 /* Extensions */,
 				ADCFE57323DC968200091F98 /* AppDelegate.swift */,
 				ADCFE58123DC968300091F98 /* Info.plist */,
+				ADCFE5B223DCD36400091F98 /* Extensions */,
 				ADCFE5A123DC9AF600091F98 /* Services */,
 				ADCFE59823DC989000091F98 /* Models */,
 				ADCFE59D23DC9A1E00091F98 /* Scenes */,
 				ADCFE59523DC987C00091F98 /* Resources */,
-				ADCFE57E23DC968300091F98 /* LaunchScreen.storyboard */,
 			);
 			path = stackoverflowusers;
 			sourceTree = "<group>";
@@ -237,6 +236,7 @@
 		ADCFE59523DC987C00091F98 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ADCFE57E23DC968300091F98 /* LaunchScreen.storyboard */,
 				ADCFE57C23DC968300091F98 /* Assets.xcassets */,
 				ADF55FFA23DDDC2500A08F23 /* Localizable.strings */,
 			);
