@@ -6,15 +6,6 @@ Note: If I rewrote this exercise today, I would probably change a lot of things.
 - Tapping on a user expands the cell to show follow and block options
 - Following or blocking a user updates the cell immediately.
 
-Some more details:
-
-- Built with Xcode 11.3 & Swift 5.1.3, using no external dependencies.
-- The API request will not be repeated if it succeeds on app launch, In order to see the error view, launch the app without internet.
-- Tested on iPhone/Portrait only.
-- Blocking a user also unfollows.
-
-
-
 ### Structure
 • Organized by feature or "flow" in Scenes folder. Each Scene should have at least one view and one viewModel. Ideally a coordinator too.
 • Models and Services in their separate folder as they can be used with more than one Scene.
