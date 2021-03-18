@@ -1,4 +1,3 @@
-Note: If I rewrote this exercise today, I would probably change a lot of things. However it's good enough to get a rough idea of my fundamentals.
 
 ### Short exercise done in Jan 2020 with the following features:
 - **Does a call to the stackoverflow API to get top 10 (by reputation) users and displays them in a table**
