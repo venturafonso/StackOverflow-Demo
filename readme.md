@@ -13,11 +13,11 @@
 
 • There will be a core network module that executes all the requests, that all the services talk to.
 • There will be a service for each identifiable requirement, the viewModel should use this service via the API protocol defined by the service. The service will ask the networkModule to execute the request. Services can be plugged into any viewModel.
-• Regarding configurations and url generation, I tried my best to show how I think about scaling and type safety, using enums for query parameter values, while using static structs for query parameter keys. In a real application, a configuration would be injected depending on the scheme/environment, instead of using a static struct.
+• Regarding configurations and url generation, using enums for query parameter values, while using static structs for query parameter keys. In a real application, a configuration would be injected depending on the scheme/environment, instead of using a static struct.
 
 ###  Architecture
 
-• I went with MVVM since it's what I'm most familiar with at the moment. The UITableViewController is notified via a closure when the state of the viewModel changed, and reacts accordingly. In the real world I would accomplish this with observables.
+• The UITableViewController is notified via a closure when the state of the viewModel changed, and reacts accordingly. In the real world I would accomplish this with observables.
  
  ### Configuration
 
