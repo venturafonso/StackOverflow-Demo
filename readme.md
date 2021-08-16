@@ -1,7 +1,7 @@
 
 ### Short exercise done in Jan 2020 with the following features:
 - **Does a call to the stackoverflow API to get top 10 (by reputation) users and displays them in a table**
-- Implemented using MVVM-C (using closures for communication)
+- Implemented using MVVM-C (using closures)
 - Tapping on a user expands the cell to show follow and block options
 - Following or blocking a user updates the cell immediately.
 
@@ -25,5 +25,5 @@
 
 ### Tableview / Table view architecture and state management:
 
--  Fully reutilizing cells and saving blocked/followed state to mock what a  prereference storage would look like dictionary, did not persist this in any way so it will reset on app relaunch.
+-  Saving blocked/followed state to mock what a preference storage would look like in dictionary, did not persist this in any way so it will reset on app relaunch.
 - UserTableViewCell class got a little too big for my liking, though I think responsibilities are still being delegated properly, there is definitely room for improvement mainly with cleaning up the constraint logic by making it more readable and obvious.
